@@ -1,0 +1,15 @@
+./main < input/test_1 > saida/test_1;
+./main < input/test_2 > saida/test_2;
+./main < input/test_3 > saida/test_3;
+./main < input/test_4 > saida/test_4;
+./main < input/test_5 > saida/test_5;
+./main < input/test_6 > saida/test_6;
+./main < input/test_7 > saida/test_7;
+./main < input/test_8 > saida/test_8;
+./main < input/test_9 > saida/test_9;
+./main < input/test_10 > saida/test_10;
+./main < input/test_11 > saida/test_11;
+./main < input/test_12 > saida/test_12;
+./main < input/test_13 > saida/test_13;
+./main < input/test_14 > saida/test_14;
+diff output saida;

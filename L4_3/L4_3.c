@@ -6,6 +6,7 @@ typedef struct
     int mes;
     int ano;
 }tData;
+
 int EhBissexto(tData data){
     if((data.ano % 4 == 0 && data.ano % 100 != 0) || (data.ano% 400 == 0)){
         return 1;
@@ -13,20 +14,23 @@ int EhBissexto(tData data){
         return 0;
     }
 }
+
 int DiasFev(tData data){
     int dia_fev;
-if(EhBissexto(data)){
+   if(EhBissexto(data)){
         dia_fev=29;
     }else{
         dia_fev=28;
     }
     return dia_fev;
 }
+
 tData LeData(){
     tData data;
     scanf("%d %d %d",&data.dia,&data.mes,&data.ano);
     return data;
 }
+
 void ImprimeData(tData data){
     if(data.dia<10){
         printf("'0%d/",data.dia);
@@ -62,11 +66,13 @@ tData ProximaData(tData data){
     }
     return data;
 }
+
 void VarreDatas(tData inicio,tData fim){
 while(inicio.dia!=fim.dia || inicio.mes!=fim.mes || inicio.ano!=fim.ano){
     ImprimeData(inicio);
     inicio=ProximaData(inicio);
 }
+
 }
 tData ValidaData(tData data){
     int dia_fev= DiasFev(data);
